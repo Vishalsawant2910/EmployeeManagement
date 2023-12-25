@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/css/bootstrap.rtl.css" rel="stylesheet" />
+<link href="~/lib/bootstrap/css/bootstrap.rtl.min.css" rel="stylesheet" />
+<a href="~/lib/bootstrap/css/bootstrap.css.map"> </a>
+<a href="~/lib/bootstrap/css/bootstrap.min.css.map"> </a>
+<a href="~/lib/bootstrap/css/bootstrap.rtl.css.map"> </a>
+<a href="~/lib/bootstrap/css/bootstrap.rtl.min.css.map"> </a>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    @if (IsSectionDefined("Scripts"))
+    {
+        @RenderSection("Scripts", required:true)
+    }
+</body>
+</html>

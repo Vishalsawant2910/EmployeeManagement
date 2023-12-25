@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Employee>
+
+@{
+
+	ViewBag.Title = "Employee List";
+}
+
+ 
+	@foreach (var Employee in Model)
+	{
+
+		<div class="card m-3">
+			<div class="card-header">
+				<h3>@Employee.Name</h3>
+			</div>
+
+				<div class="container text-center">
+			<img src="~/images/ai.jpg"  height="100" width="100" />
+	</div>
+			<div class="card-footer text-center">
+				@Html.ActionLink("View","details","home", new {id= Employee.Id })
+				<a href="/home/details/@Employee.Id" class="btn btn-primary">View</a>
+				<a href="#" class="btn btn-primary">Edit</a>
+				<a href="#" class="btn btn-danger">Delete</a>
+			</div>
+
+
+		</div>
+
+
+
+
+	}
+ 
+
+
